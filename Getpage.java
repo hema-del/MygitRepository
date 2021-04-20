@@ -8,13 +8,14 @@ public class Getpage{
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\karth\\node_modules\\geckodriver\\geckodriver.exe");
-WebDriver driver=new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\karth\\node_modules\\geckodriver\\geckodriver.exe");
+WebDriver driver=new ChromeDriver();
 driver.get("https://www.google.com");
 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 String l = driver.getPageSource();
 System.out.println("Page Source:"+l);
+driver.close();
 
 	}
 }
